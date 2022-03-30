@@ -54,11 +54,11 @@ public class ground : MonoBehaviour
     {
         GameObject go;
         Vector3 v;
-        for ( float i= -13; i<13; i++)
+        for ( float i= -17; i<17; i++)
         {
 
             go = getObject();
-            v = getlocation(i*20 +(this.transform.position.z));
+            v = getlocation(i*15 +(this.transform.position.z));
             Instantiate(go, v, Quaternion.Euler(0, 0, 0));
             go = getObject();
            
@@ -76,9 +76,10 @@ public class ground : MonoBehaviour
     private Vector3 getlocation(float i)
     {
         Vector3 v1 = new Vector3();
-        v1.Set(Random.Range(-50, 50), .8f, i);
+        Random.InitState(System.DateTime.Now.Millisecond);
+        v1.Set(Random.Range(-50, 50),Random.Range(.5f,4), i);
         
 
-        return v1;
+        return v1+transform.position;
     }
 }

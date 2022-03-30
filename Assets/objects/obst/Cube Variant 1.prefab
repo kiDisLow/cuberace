@@ -125,6 +125,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5e95ff25493fb5444b2a6347437c62e5, type: 2}
+    - target: {fileID: 1725149018197676724, guid: 759196dc0b5913d4fa66392a76829cae,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725149018197676724, guid: 759196dc0b5913d4fa66392a76829cae,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549597851928207717, guid: 759196dc0b5913d4fa66392a76829cae,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5011034957344217415, guid: 759196dc0b5913d4fa66392a76829cae,
         type: 3}
       propertyPath: m_Name
@@ -134,6 +149,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: obst
+      objectReference: {fileID: 0}
+    - target: {fileID: 5011034957344217415, guid: 759196dc0b5913d4fa66392a76829cae,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 974535202300412374, guid: 759196dc0b5913d4fa66392a76829cae, type: 3}

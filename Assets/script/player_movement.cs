@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class player_movement : MonoBehaviour
 
@@ -26,9 +28,7 @@ public class player_movement : MonoBehaviour
     {
         player.useGravity = true;
       
-        flyer.Add(flyer1);
-        flyer.Add(flyer2);
-        flyer.Add(flyer3);
+       
         
 
 
@@ -76,5 +76,13 @@ public class player_movement : MonoBehaviour
         go = flyer[Random.Range(0, 3)];
         Vector3 v = player.transform.position + v2;
         Instantiate(go, v, Quaternion.Euler(10, 45, 20));
+    }
+
+    private void OnCollisionEnter(Collision coll)
+    {
+        if (coll.collider.Equals(flyer1)  )
+            {
+           Debug.Log("we have detected colision");
+        }
     }
 }

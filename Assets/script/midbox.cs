@@ -8,14 +8,14 @@ public class midbox : MonoBehaviour
     public GameObject mid;
     public GameObject floore;
     public GameObject end;
-   // GameObject player;
+   public  GameObject player;
     public Vector3 V1;
     public Vector3 v2;
 
     public void OnTriggerEnter(Collider colider)
     {
 
-        if (colider.gameObject.name == "player")
+        if (colider.gameObject == player)
         {
            Instantiate(floore, (end.transform.position + V1), Quaternion.Euler(0, 90, 0));
             mid.transform.position = mid.transform.position + v2;
